@@ -1,25 +1,23 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
-
 public class TestFactorial {
 
-    @Test
-    public void testFactorialOfZero() {
-        assertEquals(1, Factorial.factorial(0));
-    }
+    public static void main(String[] args) {
 
-    @Test
-    public void testFactorialOfOne() {
-        assertEquals(1, Factorial.factorial(1));
-    }
+        if (Factorial.factorial(0) != 1) {
+            throw new AssertionError("Test failed for 0");
+        }
 
-    @Test
-    public void testFactorialOfFive() {
-        assertEquals(120, Factorial.factorial(5));
-    }
+        if (Factorial.factorial(1) != 1) {
+            throw new AssertionError("Test failed for 1");
+        }
 
-    @Test
-    public void testFactorialOfTen() {
-        assertEquals(3628800, Factorial.factorial(10));
+        if (Factorial.factorial(5) != 120) {
+            throw new AssertionError("Test failed for 5");
+        }
+
+        if (Factorial.factorial(10) != 3628800) {
+            throw new AssertionError("Test failed for 10");
+        }
+
+        System.out.println("All tests passed!");
     }
 }
